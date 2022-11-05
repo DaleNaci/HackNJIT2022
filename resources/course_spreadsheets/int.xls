@@ -1,0 +1,304 @@
+
+
+                                                <!-- ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_222" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 222">INT 222 - BUILDING &amp; INTERIOR SYSTEMS II</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13696">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">002</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13696</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">TF<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">10:00 AM - 11:20 AM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php">FMH 310<br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">0</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=GARCIAFI"><i class="fa fa-user"></i> Garcia Figueroa, Julio</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">3</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_264" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 264">INT 264 - INTERIOR DESIGN STUDIO II</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13697">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">002</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13697</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">MR<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">01:00 PM - 05:20 PM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php"> <br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">0</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=GOLDMAN"><i class="fa fa-user"></i> Goldman, Glenn</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">4</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_322" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 322">INT 322 - CONTRACT DOCUMENTS</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13698">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">102</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13698</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">T<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">06:00 PM - 08:50 PM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php">ECEC 115<br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">1</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=MCABRERA"><i class="fa fa-user"></i> Cisneros, Myrland</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">3</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_351" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 351">INT 351 - FURNITURE DESIGN</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13699">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">002</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13699</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">W<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">11:30 AM - 02:20 PM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php"> <br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">2</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=BROTHERS"><i class="fa fa-user"></i> Brothers, David</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">3</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_364" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 364">INT 364 - INTERIOR DESIGN STUDIO IV</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13700">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">002</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13700</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">MR<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">12:00 PM - 05:20 PM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php"> <br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">1</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=PENALBA"><i class="fa fa-user"></i> Penalba Estebanez, Ana</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">5</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course --><div ng-repeat="crs in dataMap[selectedItem].Course" id="crs_464" class="ng-scope">
+
+                                                    <!-- <div class="{{(!oldView) ? 'highBorder' : 'highBorder'}} ttl bg-warning panel-heading" style="padding: 5px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; background: #D6D7B7; font-size: medium"
+                                                            ng-bind-html=" codeTitle(crs)">
+                                                        </div> -->
+
+                                                    <div class="text-warning ng-binding" style="padding: 5px 10px;  font-size: medium" ng-bind-html=" codeTitle(crs)"><b><a target="_blank" href="https://catalog.njit.edu/search/?P=INT 464">INT 464 - INTERIOR DESIGN STUDIO V</a></b></div>
+
+                                                    <div class="table">
+                                                        <!--<table class="table table-condensed table-hover table-bordered tbSort"
+                                                               style="background: white">-->
+                                                        <table class="table table-condensed table-hover">
+                                                            <thead>
+                                                                <tr class="bg-info">
+                                                                    <th class="text-center highBorder">Info</th>
+                                                                    <!-- ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Section
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">CRN
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Delivery Mode
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Days
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Times
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Location
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Status
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Max
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Now
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Instructor
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Comments
+                                                                    </th><!-- end ngRepeat: col in cols --><th class="text-center highBorder ng-binding ng-scope" ng-repeat="col in cols">Credits
+                                                                    </th><!-- end ngRepeat: col in cols -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <!--class="{{{'cancelled': 'danger', 'closed': 'warning'}[sect.SECT_STATUS.toLowerCase()] || (((+sect.ENROLLED) >= (+sect.CAPACITY)) && 'warning')}}">-->
+                                                                <!-- ngRepeat: sect in crs.Section --><tr ng-repeat="sect in crs.Section" class="">
+
+                                                                    <td class="highBorder" style="vertical-align: middle">
+                                                                        <div class="text-center">
+                                                                            <a target="_blank" href="//www.bkstr.com/webapp/wcs/stores/servlet/booklookServlet?bookstore_id-1=584&amp;term_id-1=2023 Spring&amp;crn-1=13701">
+                                                                                <i class="fa fa-book" aria-hidden="true"></i> Book
+                                                                            </a>
+
+                                                                            <!-- ngIf: sect.profile -->
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <!-- ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">002</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">13701</div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center"><div class="tooltiphelp"><a href="#">Face-to-Face</a><span class="tooltiptext"><strong><u>Face-to-Face:</u></strong><br>Delivery of instruction is structured around in-person classroom meeting times. Instruction is delivered in person and students are expected to attend class. (sometimes referred to as traditional classroom courses)*<br><br>*Definitions are aligned with OLN’s definitions <a target="_blank" href="https://onlinelearningconsortium.org/updated-e-learning-definitions-2/">https://onlinelearningconsortium.org/updated-e-learning-definitions-2/</a><br>*Contact hours are independent of delivery method and defined in the course catalog.</span></div></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">MR<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap text-center">12:00 PM - 05:20 PM<br></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-nowrap"><a target="_blank" href="http://www5.njit.edu/about/visit/njit-maps.php"> <br></a></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><b class="text-undefined">Open</b></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">15</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope">2</td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><a target="_blank" href="//directory.njit.edu/PersDetails.aspx?persid=BROTHERS"><i class="fa fa-user"></i> Brothers, David</a></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="coms"></div></td><!-- end ngRepeat: col in cols --><td style="vertical-align: middle" ng-repeat="col in cols" ng-bind-html="col.code(sect)" class="text-center media-middle highBorder ng-binding ng-scope"><div class="text-center">5</div></td><!-- end ngRepeat: col in cols -->
+                                                                </tr><!-- end ngRepeat: sect in crs.Section -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end ngRepeat: crs in dataMap[selectedItem].Course -->
+                                            
