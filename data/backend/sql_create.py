@@ -1,4 +1,5 @@
 import os
+import random
 
 import mysql.connector
 from bs4 import BeautifulSoup
@@ -140,6 +141,8 @@ def add_to_db(course_directory):
                     section["time"][:19],
                     section["time"][19:]
                 ]
+            elif len(section["time"]) > 20:
+                time = [section["time"][:19]]
             else:
                 times = [section["time"]]
             
@@ -163,7 +166,7 @@ def add_to_db(course_directory):
 
 
 def get_rmp_value(professor_name):
-    return 3
+    return random.randint(1, 5)
 
 
 def main():

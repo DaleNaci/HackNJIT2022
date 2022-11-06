@@ -9,13 +9,19 @@ from components.section import Section
 
 
 def main():
-    x = get_combination()
+    course_lst = get_sections()
+
+    for section_lst in course_lst:
+        for section in section_lst:
+            section.crn = 0
+
+    x = get_combination(course_lst)
 
     for t in x:
         print(t[0].crn, t[1].crn, t[2].crn)
 
 
-def get_combination():
+def get_sections():
     courseRequests = []
     for arg in sys.argv[1:]:
         c = arg.split(",")
@@ -45,7 +51,11 @@ def get_combination():
             sections.append(Section(section_info[0], section_info[1], section_info[2], section_info[3], section_info[4]))
 
         courses.append(sections)
+    
+    return courses
 
+
+def get_combination(courses):
     return list(itertools.product(*courses))
 
 

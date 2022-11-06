@@ -5,5 +5,7 @@ class Section:
         self.course_name = course_name
         self.crn = crn
         self.professor_name = professor_name
-        self.start = None
-        self.end = None
+        self.periods = []
+
+
+    
