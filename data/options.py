@@ -4,8 +4,8 @@ import itertools
 from pprint import pprint
 import mysql.connector
 
-from data.helper_functions import check_conflict
-from data.components.section import Section
+from helper_functions import check_conflict
+from components.section import Section
 
 
 def main():
@@ -21,7 +21,7 @@ def get_combination():
         c = arg.split(",")
         courseRequests.append((c[0],c[1]))
 
-    with open("db_password.txt", "r") as f:
+    with open("../db_password.txt", "r") as f:
         mydb = mysql.connector.connect(
             host = "sql.njit.edu",
             user = "pk577",
