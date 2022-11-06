@@ -1,0 +1,30 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: .75em;
+}
+
+main {
+    background-color: whitesmoke;
+    padding: 2em 3em 2em 3em;
+    width: 35em;
+    margin: auto;
+}
+
+.btn.btn-outline-success {
+    margin: .5em;
+}
+
+#custom-margin {
+    margin-bottom: .4em;
+}
+.btn.btn-outline-secondary.btn-sm {
+    margin-bottom: .4em;
+}
