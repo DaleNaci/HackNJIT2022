@@ -21,13 +21,14 @@ def get_combination():
         c = arg.split(",")
         courseRequests.append((c[0],c[1]))
 
-    mydb = mysql.connector.connect(
-    host="sql.njit.edu",
-    user="pk577",
-    password="Data147159!!",
-    port="3306",
-    database="pk577"
-    )
+    with open("../../db_password.txt", "r") as f:
+        mydb = mysql.connector.connect(
+            host = "sql.njit.edu",
+            user = "pk577",
+            password = f.readline().strip(),
+            port = "3306",
+            database = "pk577"
+        )
 
     mycursor = mydb.cursor()
 
