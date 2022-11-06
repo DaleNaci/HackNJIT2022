@@ -124,6 +124,9 @@ def evaluate_options(goodCombos):
             if section != t[1][-1]:
                 s += ", "
 
+        with open("temp.txt", "w") as f:
+            f.write(s)
+
         print(s)
 
 
@@ -146,7 +149,7 @@ def remove_conflicts(allCombos):
             goodCombos.append(combo)
 
     return goodCombos
-    
+
 
 def get_sections():
     courseRequests = []
