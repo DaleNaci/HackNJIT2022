@@ -19,7 +19,7 @@
                 <button class="btn btn-outline-secondary">Add Course &nbsp; 
                     <span>+ </span>
                 </button>
-                <p><br>Course Category &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp Course Number</p>
+                <p><br>Course Category &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Course Number</p>
                 <div id="custom-margin"><input type="course-category" name="course1"><input type="course-number" name="num1"></div>
             </div>
             <input id="x" type="hidden" name="x" value="0" />
