@@ -115,6 +115,7 @@ def add_to_db(course_directory):
             section_terms = [
                 section["CRN"],
                 course_id_counter,
+                section["section_number"],
                 section["professor"]
             ]
 
@@ -125,7 +126,7 @@ def add_to_db(course_directory):
 
             cursor.execute(f"""
                 INSERT INTO Section
-                     VALUES ({section_terms[0]}, {section_terms[1]}, '{section_terms[2]}')
+                     VALUES ({section_terms[0]}, {section_terms[1]}, '{section_terms[2]}', '{section_terms[3]}')
             """)
 
             cursor.execute(f"""

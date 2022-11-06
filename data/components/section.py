@@ -2,12 +2,13 @@ from random import randint
 
 
 class Section:
-    def __init__(self, course_category, course_number, course_name, crn, professor_name):
+    def __init__(self, course_category, course_number, course_name, crn, professor_name, section_number):
         self.course_category = course_category
         self.course_number = course_number
         self.course_name = course_name
         self.crn = crn
         self.professor_name = professor_name
+        self.section_number = section_number
         self.rmp = randint(10, 50) / 10 # Usually would grab from database
         self.periods = []
 

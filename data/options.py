@@ -121,6 +121,8 @@ def evaluate_options(goodCombos):
             s += section.course_category
             s += " "
             s += section.course_number
+            s += " "
+            s += section.section_number
             if section != t[1][-1]:
                 s += ", "
 
@@ -171,14 +173,14 @@ def get_sections():
     #prepare sql for getting all requested courses
     courses = []
     for cat, num in courseRequests:
-        sql = "SELECT C.CourseCat, C.Number, C.Name, S.CRN, S.ProfessorName FROM Course as C, Section as S WHERE ("
+        sql = "SELECT C.CourseCat, C.Number, C.Name, S.CRN, S.ProfessorName, S.SectionNum FROM Course as C, Section as S WHERE ("
         sql += "C.CourseCat=\"" + cat + "\" AND C.Number=\"" + num + "\" AND C.CourseId=S.CourseId)"
         mycursor.execute(sql)
         # courses.append(mycursor.fetchall())
         sections = []
 
         for section_info in mycursor.fetchall():
-            sections.append(Section(section_info[0], section_info[1], section_info[2], section_info[3], section_info[4]))
+            sections.append(Section(section_info[0], section_info[1], section_info[2], section_info[3], section_info[4], section_info[5]))
 
         courses.append(sections)
     
