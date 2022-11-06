@@ -34,7 +34,7 @@ class Section:
         return False
 
 
-    def __time_split(self, s: str) -> tuple[str, str]:
+    def __time_split(self, s: str) -> tuple:
         return s.split(" - ")
 
 
