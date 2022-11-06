@@ -37,7 +37,7 @@
                 e.preventDefault();
                 if (x < max_fields) {
                     x++;
-                    document.getElementById(x).value = x;
+                    document.getElementById("x").value = x;
                     $(wrapper).append('<div><input type="course-category" name="course' + x + '"/><input type="course-number" name="num' + x + '"/><button class="btn btn-outline-secondary btn-sm">Delete</button></div>');
                 } else {
                 alert('You Reached the limits')
@@ -48,7 +48,7 @@
                 e.preventDefault();
                 $(this).parent('div').remove();
                 x--;
-                document.getElementById(x).value = x;
+                document.getElementById("x").value = x;
             })
 
         });
