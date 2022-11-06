@@ -144,8 +144,7 @@ def remove_conflicts(allCombos):
                 break
         if good == True:
             goodCombos.append(combo)
-    
-    return goodCombos
+
 
 
 def get_sections():
