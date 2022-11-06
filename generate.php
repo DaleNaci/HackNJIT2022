@@ -4,8 +4,10 @@ $args = $_POST["priority1"] . " " . $_POST["priority2"] . " " . $_POST["priority
 for($x = (int)$_POST["x"]; $x>0; $x-=1){
     $args = $args . $_POST["course{$x}"] . "," . $_POST["num{$x}"] . " ";
 }
-exec("python options.py {$args}", $output);
-foreach ($output as $out){
-    echo $out;
-}
+exec("cd data");
+exec("python data.options.py {$args}", $out);
+var_dump($out);
+/*foreach ($out as $line){
+    echo $line;
+}*/
 ?>
