@@ -29,7 +29,8 @@ def main():
                 section.periods = mycursor.fetchall()
     
     #test 2 sections that conflict and 2 that dont
-    
+    pprint(course_lst[0].time_conflict(course_lst[2].periods)) # should conflict
+
     x = get_combination(course_lst)
 
 
