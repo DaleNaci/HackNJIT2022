@@ -11,14 +11,26 @@ from components.section import Section
 def main():
     course_lst = get_sections()
 
-    for section_lst in course_lst:
-        for section in section_lst:
-            section.crn = 0
-
+    #connect to mysql
+    with open("../db_password.txt", "r") as f:
+        mydb = mysql.connector.connect(
+            host = "sql.njit.edu",
+            user = "pk577",
+            password = f.readline().strip(),
+            port = "3306",
+            database = "pk577"
+        )
+        mycursor = mydb.cursor()
+        for section_lst in course_lst:
+            for section in section_lst:
+                #add date and time to section periods
+                sql = "SELECT Day, Time FROM Meet WHERE CRN=\"" + str(section.crn) + "\""
+                mycursor.execute(sql)
+                section.periods = mycursor.fetchall()
+    
+    #test 2 sections that conflict and 2 that dont
+    
     x = get_combination(course_lst)
-
-    for t in x:
-        print(t[0].crn, t[1].crn, t[2].crn)
 
 
 def get_sections():
