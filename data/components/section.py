@@ -8,7 +8,7 @@ class Section:
         self.course_name = course_name
         self.crn = crn
         self.professor_name = professor_name
-        self.rmp = randint(1, 5) # Usually would grab from database
+        self.rmp = randint(10, 50) / 10 # Usually would grab from database
         self.periods = []
 
 

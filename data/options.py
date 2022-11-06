@@ -29,9 +29,106 @@ def main():
                 section.periods = mycursor.fetchall()
 
     allCombos = get_combination(course_lst)
-    pprint(allCombos)
+    # pprint(allCombos)
     #loop through x "cobinations of courses"
     #test each element against the others
+    goodCombos = remove_conflicts(allCombos)
+
+    evaluate_options(goodCombos)
+
+
+def evaluate_options(goodCombos):
+    six_to_nine = int(sys.argv[1])
+    eight_thirty = int(sys.argv[2])
+    monday = int(sys.argv[3])
+    friday = int(sys.argv[4])
+    rmp = int(sys.argv[5])
+
+    ratings = []
+
+    for combo in goodCombos:
+        rr = 0
+
+        if six_to_nine > 0:
+            good = True
+
+            for section in combo: #Double check sections are in combos
+                for period in section.periods:
+                    if period[1] == "6:00 PM - 8:50 PM":
+                        good = False
+                        break
+        
+            if good:
+                rr += six_to_nine
+        
+        if eight_thirty > 0:
+            good = True
+
+            for section in combo:
+                for period in section.periods:
+                    if period[1] == "6:00 PM - 8:50 PM":
+                        good = False
+                        break
+            
+            if good:
+                rr += eight_thirty
+        
+        if monday > 0:
+            good = True
+
+            for section in combo:
+                for period in section.periods:
+                    if period[0] == "M":
+                        good = False
+                        break
+            
+            if good:
+                rr += monday
+        
+        if friday > 0:
+            good = True
+
+            for section in combo:
+                for period in section.periods:
+                    if period[0] == "F":
+                        good = False
+            
+            if good:
+                rr += friday
+            
+        if rmp > 0:
+            total_rmp = 0
+
+            for section in combo:
+                total_rmp += section.rmp
+            
+            rr += (total_rmp / 25) * rmp
+
+        ratings.append((rr, combo))
+
+    ratings.sort(key = lambda ratings: ratings[0], reverse=True)
+
+    x = 0
+
+    for t in ratings:
+        x += 1
+        if x > 5:
+            break
+        s = str(round(t[0], 2))
+        s += " "
+
+        for section in t[1]:
+            s += section.course_category
+            s += " "
+            s += section.course_number
+            if section != t[1][-1]:
+                s += ", "
+
+        print(s)
+
+
+
+def remove_conflicts(allCombos):
     goodCombos = []
     for combo in allCombos:
         clen = len(combo)
@@ -47,12 +144,13 @@ def main():
                 break
         if good == True:
             goodCombos.append(combo)
-
+    
+    return goodCombos
 
 
 def get_sections():
     courseRequests = []
-    for arg in sys.argv[1:]:
+    for arg in sys.argv[6:]:
         c = arg.split(",")
         courseRequests.append((c[0],c[1]))
 
@@ -88,6 +186,4 @@ def get_combination(courses):
     return list(itertools.product(*courses))
 
 
-
-if __name__ == "__main__":
-    main()
+main()
