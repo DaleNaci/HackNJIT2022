@@ -27,11 +27,27 @@ def main():
                 sql = "SELECT Day, Time FROM Meet WHERE CRN=\"" + str(section.crn) + "\""
                 mycursor.execute(sql)
                 section.periods = mycursor.fetchall()
-    
-    #test 2 sections that conflict and 2 that dont
-    pprint(course_lst[0].time_conflict(course_lst[2].periods)) # should conflict
 
-    x = get_combination(course_lst)
+    allCombos = get_combination(course_lst)
+    pprint(allCombos)
+    #loop through x "cobinations of courses"
+    #test each element against the others
+    goodCombos = []
+    for combo in allCombos:
+        clen = len(combo)
+        good = True #does combo work
+        #compare all elements in combo for t conflict
+        for i in range(clen):
+            for j in range(i+1,clen):
+                if(combo[i].time_conflict(combo[j])):
+                    #Detect time conflict and break out
+                    good = False
+                    break
+            if good == False:
+                break
+        if good == True:
+            goodCombos.append(combo)
+
 
 
 def get_sections():
