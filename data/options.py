@@ -145,7 +145,8 @@ def remove_conflicts(allCombos):
         if good == True:
             goodCombos.append(combo)
 
-
+    return goodCombos
+    
 
 def get_sections():
     courseRequests = []
