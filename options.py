@@ -24,12 +24,12 @@ mycursor = mydb.cursor()
 #prepare sql for getting all requested courses
 sql = "SELECT * FROM Course WHERE "
 for cat in courseRequests.keys():
-    sql += "CourseCat=" + cat + 
+    sql += "CourseCat=\"" + cat + "\" AND Number=\"" + courseRequests[cat] + "\" OR "
+sql = sql[0:-4]
 mycursor.execute(sql)
 
 myresult = mycursor.fetchall()
 
 #go through all courses
 for course in myresult:
-  print(x)
-"""
+  print(course)
