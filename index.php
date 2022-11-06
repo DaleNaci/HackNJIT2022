@@ -30,7 +30,6 @@
                 </button>
             </div>
             <br>
-
             <!-- Schedule Preferences-->
             <div class="section">
                 <h4>Schedule Preferences:</h4>
@@ -45,9 +44,8 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="priority1"><b>No 6:00pm-9:00pm Class</b></label>
+                <label for="priority1"><b>&nbsp No 6:00pm-9:00pm Class</b></label>
                 <br>
-
                 <select id="priority2" name="priority2">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -56,9 +54,8 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="priority2"><b>No 8:30am Class</b></label>
+                <label for="priority2"><b>&nbsp No 8:30am Class</b></label>
                 <br>
-
                 <select id="priority3" name="priority3">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -67,9 +64,8 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="priority3"><b>No Monday Class</b></label>
+                <label for="priority3"><b>&nbsp No Monday Class</b></label>
                 <br>
-
                 <select id="priority4" name="priority4">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -78,9 +74,8 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="priority4"><b>No Friday Class</b></label>
+                <label for="priority4"><b>&nbsp No Friday Class</b></label>
                 <br>
-
                 <select id="priority5" name="priority5">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -89,7 +84,7 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="priority5"><b>Rate My Professor</b></label>
+                <label for="priority5"><b>&nbsp Rate My Professor</b></label>
                 <br>
                 <br>
             </div>
@@ -100,13 +95,11 @@
         
         <script>
             $(document).ready(function() {
-
             /*add courses*/
             var max_fields = 6;
             var wrapper = $(".container1");
             var add_button = $(".btn.btn-outline-secondary");
             var x = 1;
-
             $(add_button).click(function(e) {
                 e.preventDefault();
                 if (x < max_fields) {
