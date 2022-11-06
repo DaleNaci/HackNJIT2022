@@ -16,10 +16,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <form action="generate.php" method="post">
             <div class="container1">
-                <button class="btn btn-outline-secondary">Add Class &nbsp; 
+                <button class="btn btn-outline-secondary">Add Course &nbsp; 
                     <span>+ </span>
                 </button>
-                <p><br>Class Category &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp Class Number</p>
+                <p><br>Course Category &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp Course Number</p>
                 <div id="custom-margin"><input type="course-category" name="course1"><input type="course-number" name="num1"></div>
             </div>
             <input id="x" type="hidden" name="x" value="0" />
