@@ -29,7 +29,7 @@ def main():
                 section.periods = mycursor.fetchall()
 
     allCombos = get_combination(course_lst)
-    pprint(allCombos)
+    
     #loop through x "cobinations of courses"
     #test each element against the others
     goodCombos = []
@@ -47,6 +47,9 @@ def main():
                 break
         if good == True:
             goodCombos.append(combo)
+    for combo in goodCombos:
+        for section in combo:
+            pprint(section.periods)
 
 
 
