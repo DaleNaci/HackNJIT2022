@@ -1,8 +1,15 @@
 import mysql.connector
 import sys
+from pprint import pprint
 
 #pass student classes thru command line
-classes=sys.argv
+#convert requested courses into a map -> CType:Cnumber
+courseRequests = {}
+for arg in sys.argv:
+    if arg=='options.py':
+        continue
+    c = arg.split(",")
+    courseRequests[c[0]] = c[1]
 
 mydb = mysql.connector.connect(
   host="sql.njit.edu",
@@ -14,9 +21,15 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM students")
+#prepare sql for getting all requested courses
+sql = "SELECT * FROM Course WHERE "
+for cat in courseRequests.keys():
+    sql += "CourseCat=" + cat + 
+mycursor.execute(sql)
 
 myresult = mycursor.fetchall()
 
-for x in myresult:
+#go through all courses
+for course in myresult:
   print(x)
+"""
