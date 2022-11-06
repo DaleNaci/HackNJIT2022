@@ -22,14 +22,13 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 #prepare sql for getting all requested courses
-sql = "SELECT * FROM Course WHERE "
+sql = "SELECT * FROM Course as C, Section as S, Meet as M WHERE ("
 for cat in courseRequests.keys():
-    sql += "CourseCat=\"" + cat + "\" AND Number=\"" + courseRequests[cat] + "\" OR "
-sql = sql[0:-4]
-mycursor.execute(sql)
+    sql += "C.CourseCat=\"" + cat + "\" AND C.Number=\"" + courseRequests[cat] + "\" AND C.CourseId=S.CourseId AND S.CRN=M.CRN)"
+    mycursor.execute(sql)
+    courses = mycursor.fetchall()
 
-myresult = mycursor.fetchall()
-
-#go through all courses
-for course in myresult:
-  print(course)
+#get all sections for the course
+sql = "SELECT * FROM Section WHERE "
+for course in courses:
+  
