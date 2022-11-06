@@ -1,3 +1,6 @@
+from random import randint
+
+
 class Section:
     def __init__(self, course_category, course_number, course_name, crn, professor_name):
         self.course_category = course_category
@@ -5,6 +8,7 @@ class Section:
         self.course_name = course_name
         self.crn = crn
         self.professor_name = professor_name
+        self.rmp = randint(1, 5) # Usually would grab from database
         self.periods = []
 
 
